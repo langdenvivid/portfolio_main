@@ -43,24 +43,29 @@ export default function Example() {
                         <Link
                             href={"https://github.com/Graham2000/EazyBuy"}
                             target="_blank"
-                            className="p-4 relative flex flex-col items-center gap-4 duration-700 group md:gap-8 md:py-24  lg:pb-48  md:p-16"
+        
                         >
     
-                            <div className="z-10 flex flex-col items-center">
-                                <span className="text-xl font-medium duration-150 lg:text-3xl text-zinc-200 group-hover:text-white font-display">
+                            <article className="relative w-full h-full p-4 md:p-8">
+                                <h2 id="featured-post"
+									className="mt-4 text-3xl font-bold text-zinc-100 group-hover:text-white sm:text-4xl font-display"
+                                >
                                     EazyBuy
-                                </span>
-                                <span className="mt-4 text-sm text-center duration-1000 text-zinc-400 group-hover:text-zinc-200">
+                                </h2>
+                                <p className="mt-4 leading-8 duration-150 text-zinc-400 group-hover:text-zinc-300">
                                     Full-Stack Ecommerce application that features a user registration system, order tracking, product reviews, and payment processing.
-                                </span>
-                            </div>
+                                </p>
+                            </article>
                         </Link>
                     </Card>
 
                     <div className="flex flex-col w-full gap-8 mx-auto border-t border-gray-900/10 lg:mx-0 lg:border-t-0">
                         {projects.map((project) => (
                             <Card>
-                                <Link href={project.href}>
+                                <Link 
+                                    href={project.href}
+                                    target="_blank"
+                                >
                                     <article className="p-4 md:p-8">
 
                                         <h2 className="z-20 text-xl font-medium duration-1000 lg:text-3xl text-zinc-200 group-hover:text-white font-display">
