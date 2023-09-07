@@ -6,14 +6,14 @@ import { Card } from "../components/card";
 
 const projects = [
 	{
-		href: "https://github.com/Graham2000/WeatherWise",
-		label: "React.js based weather application that uses WeatherAPI.com to retrieve current weather information.",
+		href: "/projects/weather-wise",
+		label: "React.js based weather application that integrates a weather API to provide real-time weather data and trends.",
 		title: "Weather Wise",
         github: "",
         details: ""
 	},
 	{
-		href: "https://github.com/Graham2000/Notes",
+		href: "/projects/react-notes",
 		label: "Notes application that saves persistant data using the Web Storage API.",
 		title: "React Notes",
         github: "",
@@ -41,11 +41,8 @@ export default function Example() {
                 <div className="grid grid-cols-1 gap-8 mx-auto lg:grid-cols-2">
                     <Card>
                         <Link
-                            href={"https://github.com/Graham2000/EazyBuy"}
-                            target="_blank"
-        
+                            href={"/projects/eazy-buy"}
                         >
-    
                             <article className="relative w-full h-full p-4 md:p-8">
                                 <h2 id="featured-post"
 									className="mt-4 text-3xl font-bold text-zinc-100 group-hover:text-white sm:text-4xl font-display"
@@ -53,8 +50,13 @@ export default function Example() {
                                     EazyBuy
                                 </h2>
                                 <p className="mt-4 leading-8 duration-150 text-zinc-400 group-hover:text-zinc-300">
-                                    Full-Stack Ecommerce application that features a user registration system, order tracking, product reviews, and payment processing.
+                                    Full-stack ecommerce application that features a user registration system, order tracking, product reviews, and payment processing.
                                 </p>
+                                <div className="absolute bottom-4 md:bottom-8">
+                                    <p className="hidden text-zinc-200 hover:text-zinc-50 lg:block">
+                                        Read more <span aria-hidden="true">&rarr;</span>
+                                    </p>
+                                </div>
                             </article>
                         </Link>
                     </Card>
@@ -64,10 +66,8 @@ export default function Example() {
                             <Card>
                                 <Link 
                                     href={project.href}
-                                    target="_blank"
                                 >
                                     <article className="p-4 md:p-8">
-
                                         <h2 className="z-20 text-xl font-medium duration-1000 lg:text-3xl text-zinc-200 group-hover:text-white font-display">
                                             {project.title}
                                         </h2>
